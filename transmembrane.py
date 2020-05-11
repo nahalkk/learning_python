@@ -43,7 +43,7 @@ def read_fasta(filename):
 
 filename = sys.argv[1]
 
-#hydrophobic region
+#function for transmembrane properties
 def hydrphob(seq,w,t):
 	for i in range(len(seq) +1 -w):
 		sseq = seq[i:i+w]
@@ -51,6 +51,7 @@ def hydrphob(seq,w,t):
 			return True
 	return False
 
+#hydrophobicity
 def kd(seq):
 	k = 0
 	for aa in seq:
